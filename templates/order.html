@@ -1,0 +1,24 @@
+{% extends "_layout.html" %}
+{% block content %}
+<h4>我的订单</h4>
+{% for key in details.keys() %}
+<table>
+    <tr>
+        <th style="border-bottom: 1px solid steelblue;" colspan="3">订单编号：{{key}}</th>
+    </tr>
+    {% for detail in details[key] %}
+    <tr>
+        <td>
+            <img src="/static/{{detail[2]}}" title="{{detail[0]}}" width="80"/>
+        </td>
+        <td>
+            <span>{{detail[0]}}</span>
+        </td>
+        <td>
+            <span style="color:red;font-weight: 700;font-size:18px;">&yen;{{detail[1]}}</span>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endfor %}
+{% endblock %}

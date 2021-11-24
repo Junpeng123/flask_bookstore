@@ -1,0 +1,17 @@
+{% extends "_layout.html" %}
+{% block content %}
+
+
+
+<h3> {{book.title}}</h3>
+<div style="display: inline-block;">
+ <img src="{{book.img}}" width="120px" height="180px"/>
+</div>
+<div style="display: inline-block; padding: 4px 20px">
+ <p> Author: {{book.author}} </p>  
+ <p> Price:  &pound; {{book.retail_price}} </p>   
+ <p>  Pub.Date: {{book.pub_date}} </p>  
+ <p>  Description: {{book.description}} </p>  
+</div>
+
+{% endblock %}

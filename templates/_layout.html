@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My bookstore</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css"/>
+    <script src="/static/js/jquery3.0.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="main">
+    <div class="head">
+        <div class="title">My bookstore</div>
+        <div class="menu">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/cart/index"> Cart </a></li>
+               
+                {% if current_user.is_authenticated %}
+                <li><a href="/logout" class="fr">Logout</a></li>
+                <li><a href="#" class="fr">{{ current_user.username}}</a></li>  
+                {% else %}
+                <li><a href="/login" class="fr">Login</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+    <div class="main_content">
+        {% block content %}
+        {% endblock %}
+    </div>
+    <div class="foot">
+       <div style="height:1px; background: steelblue" />
+        Copyright &copy;2021 Bookstore.
+    </div>
+</div>
+</body>
+</html>

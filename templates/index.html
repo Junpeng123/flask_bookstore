@@ -1,0 +1,39 @@
+{% extends "_layout.html" %}
+{% block content %}
+
+<div style=" text-align:right;">
+<a  href="/cart/index" class="cart">  
+ <img src="/static/img/cart.jpg" alt=""> 
+ <b>&nbsp;{{num}}&nbsp;</b>  
+ &nbsp; Costs: &pound;{{costs}}  
+</a>
+<br>
+<hr>
+</div>
+<div class="books">
+    {% for book in my_books %}  
+    <dl>
+        <dt>
+            <div style="width:200px; height:180px;text-align:center;"><img src="{{book.img}}" width="120px" height="180px"/></div>
+            <div style="text-align: center">
+                <a href="/cart/add/{{book.isbn}}" style="text-decoration: none;"> <button> Add to cart </button></a>&nbsp;
+                
+        </dt>
+        <a href="/detail/{{book.isbn}}">  
+            <dd>
+                <b>{{book.title}}</b>
+                <span>Author：{{book.author}}</span>
+                <span> Pub.Date:  </span>
+                {{book.pub_date}}
+                <span> Price：</span>
+                <span style="font-size:18px; color:red;font-weight: bold;">&pound;{{book.retail_price}}
+                </span>
+
+            </dd>
+        </a>
+    </dl>
+
+    {% endfor %}  
+</div>
+
+{% endblock %}

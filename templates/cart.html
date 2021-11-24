@@ -1,0 +1,43 @@
+{% extends "_layout.html" %}
+{% block content %}
+<h4>My shopping cart</h4>
+
+    <table class="bordered" style="width: 900px">
+        <tr>
+           
+            <th> Cover </th>
+             <th>Book name</th>
+            <th>Unit Price</th>
+            <th>Quantity</th>
+            <th> # </th>
+        </tr>
+        {% for it in books %}
+        <tr>
+            <td><img src="{{it.book.img}}" width="120"/></td>
+            <td>
+                <span id="bookname">{{ it.book.title }}</span>
+            </td>
+            <td>
+                <span  style="color:red; font-weight: 700; font-size: 18px;">&pound;{{it.book.retail_price}}</span>
+            </td>
+            <td>
+                 {{it.quantity}}  
+            </td>
+            <td>
+                  <a href="/cart/{{it.book.isbn}}/remove"> <button>  Remove </button>  </a>
+            </td>
+        </tr>
+        {% endfor %}
+        <tr>
+             <td colspan="5" style="text-align: right; font-size: 22px;color: red">
+               Total:  &pound;  {{total}}  &emsp; <a href="/cart/remove_all" style="text-decoration:none;"> <button>Remove All</button> </a> &emsp; 
+                <a href="/cart/pay_check" style="text-decoration:none;"> <button class="btn"> Pay Check</button> </a>  
+                 
+            </td>
+        </tr>
+    </table>
+
+<br>
+  
+<br>
+{% endblock %}

@@ -1,0 +1,233 @@
+/*我的个性化商城主要样式表*/
+
+.cart b{
+   background-color: #38f;
+   color: white;
+}
+.cart img{
+   margin-bottom: -7px;
+}
+div.main {
+    width: 95%;
+    margin: auto;
+}
+
+a{
+    color:black;
+    text-decoration:none;
+}
+
+form{
+    margin:0 auto;
+    max-width: 600px;
+}
+.loginform{
+    display: block;
+    margin: 0 auto; 
+    width: 600px;
+}
+
+div.head {
+    height: 90px;
+}
+.title{
+    font-size: 24px;
+    padding: 5px 50px; 
+}
+.fr{
+    float: right;
+    margin-right: 20px;
+}
+/* .head{
+    font-size: 24px;
+    text-align: center;
+} */
+div.head div.menu{
+    background:steelblue;
+    line-height: 40px;
+}
+
+div.head ul{
+    list-style: none;
+    margin:3px;
+}
+
+div.head ul li{
+    display: inline;
+}
+
+div.head ul li a{
+    color:whitesmoke;
+    padding:3px 7px;
+    text-decoration: none;
+}
+div.head ul li a:hover{
+    text-decoration: underline;
+}
+
+/*页脚*/
+div.foot{
+    line-height: 40px;
+    text-align: center;
+    font-size:12px;
+    clear: both;
+}
+
+/*图书列表布局*/
+div.books{
+
+}
+
+div.books dl{
+    width:380px;
+    height: 200px;
+    float:left;
+    list-style: none;
+    padding:0;
+}
+
+div.books dl dt{
+    width:210px;
+    float:left;
+    list-style: none;
+    margin:3px;
+    padding:2px;
+}
+
+div.books dd{
+    float:left;
+    width:130px;
+    list-style: none;
+    margin:3px;
+    padding:2px;
+}
+div.books dd span{
+    padding: 2px;
+    font-size:14px;
+}
+
+div.books dd span{
+    display: block;
+}
+
+/*分页*/
+div.paging{
+    clear:both;
+    text-align:center;
+    margin: auto;
+    width: 100%;
+    line-height: 43px;
+}
+
+input.form_control{
+    line-height: 25px;
+    min-width: 300px;
+    font-size: 18px;
+}
+input.btn,.btn {
+    padding:6px 20px;
+    font-size:14px;
+    color: white;
+    border: none;
+    background:steelblue;
+    margin: 10px 0px;
+}
+
+/*订单信息*/
+ul.order_list{
+    list-style:none;
+    clear: both;
+    margin: 5px 17px;
+}
+ul.order_list li{
+    list-style:none;
+    width:120px;
+    float:left;
+}
+ul.order_list li.title{
+    list-style:none;
+    border-bottom:1px solid steelblue;
+    clear: both;
+    width: 95%;
+    padding:3px 9px;
+}
+table {
+*border-collapse: collapse; /* IE7 and lower */
+border-spacing: 0;
+width: 100%;
+}
+ 
+.bordered {
+border: solid #ccc 1px;
+-moz-border-radius: 6px;
+-webkit-border-radius: 6px;
+border-radius: 6px;
+-webkit-box-shadow: 0 1px 1px #ccc;
+-moz-box-shadow: 0 1px 1px #ccc;
+box-shadow: 0 1px 1px #ccc;
+}
+ 
+.bordered tr:hover {
+background: #fbf8e9;
+-o-transition: all 0.1s ease-in-out;
+-webkit-transition: all 0.1s ease-in-out;
+-moz-transition: all 0.1s ease-in-out;
+-ms-transition: all 0.1s ease-in-out;
+transition: all 0.1s ease-in-out;
+}
+ 
+.bordered td, .bordered th {
+border-left: 1px solid #ccc;
+border-top: 1px solid #ccc;
+padding: 10px;
+text-align: left;
+}
+ 
+.bordered th {
+background-color: #dce9f9;
+background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#dce9f9));
+background-image: -webkit-linear-gradient(top, #ebf3fc, #dce9f9);
+background-image: -moz-linear-gradient(top, #ebf3fc, #dce9f9);
+background-image: -ms-linear-gradient(top, #ebf3fc, #dce9f9);
+background-image: -o-linear-gradient(top, #ebf3fc, #dce9f9);
+background-image: linear-gradient(top, #ebf3fc, #dce9f9);
+-webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;
+-moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;
+box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;
+border-top: none;
+text-shadow: 0 1px 0 rgba(255,255,255,.5);
+}
+ 
+.bordered td:first-child, .bordered th:first-child {
+border-left: none;
+}
+ 
+.bordered th:first-child {
+-moz-border-radius: 6px 0 0 0;
+-webkit-border-radius: 6px 0 0 0;
+border-radius: 6px 0 0 0;
+}
+ 
+.bordered th:last-child {
+-moz-border-radius: 0 6px 0 0;
+-webkit-border-radius: 0 6px 0 0;
+border-radius: 0 6px 0 0;
+}
+ 
+.bordered th:only-child{
+-moz-border-radius: 6px 6px 0 0;
+-webkit-border-radius: 6px 6px 0 0;
+border-radius: 6px 6px 0 0;
+}
+ 
+.bordered tr:last-child td:first-child {
+-moz-border-radius: 0 0 0 6px;
+-webkit-border-radius: 0 0 0 6px;
+border-radius: 0 0 0 6px; 
+}
+ 
+.bordered tr:last-child td:last-child {
+-moz-border-radius: 0 0 6px 0;
+-webkit-border-radius: 0 0 6px 0;
+border-radius: 0 0 6px 0;
+}

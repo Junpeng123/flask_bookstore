@@ -1,0 +1,46 @@
+{% extends "_layout.html" %}
+{% block content %}
+<h4>Order Check</h4>
+
+    <table class="bordered" style="width: 900px">
+        <tr>
+           
+            <th> Cover </th>
+             <th>book name</th>
+            <th>Unit Price</th>
+            <th>quantity</th>
+           
+        </tr>
+        {% for it in res %}
+        <tr>
+            <td><img src="{{it.book.img}}" width="120"/></td>
+            <td>
+                <span id="bookname">{{ it.book.title }}</span>
+            </td>
+            <td>
+                <span  style="color:red; font-weight: 700; font-size: 18px;">&pound;{{it.book.retail_price}}</span>
+            </td>
+            <td>
+                 {{it.quantity}}  
+            </td>
+            
+        </tr>
+        {% endfor %}
+        <tr>
+            <ul>
+             {% for it in not_enough %}
+              <li> Book 《{{ it.book.title }} 》 quantity {{it.quantity}}  is not satisfied ！ </li>
+              {% endfor %}
+              </ul>
+             <td colspan="5" style="text-align: right; font-size: 22px;color: red"> 
+               Total:  &pound;  {{[total_money,tota_postage]|sum }} <small>(Postage:&pound;  {{tota_postage}} ) </small>  &emsp;  &emsp; 
+                <a href="/cart/pay_now" style="text-decoration:none;"> <button class="btn"> Pay now </button> </a>  
+                 
+            </td>
+        </tr>
+    </table>
+
+<br>
+  
+<br>
+{% endblock %}

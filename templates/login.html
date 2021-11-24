@@ -1,0 +1,30 @@
+{% extends "_layout.html" %}
+{% block content %}
+
+<div class="loginform"> 
+    <h3> User Login</h3>
+   
+    <form action='{{url_for("do_login")}}' method="POST">
+        <div>
+            <p style="color: red;">{{err}}</p>
+            <div style="margin:10px 0px;">
+                <label>Username:</label>
+            </div>
+            <div>
+                <input type="text" required="required" class="form_control"  name="user_name"/>
+            </div>
+            <div style="margin:10px 0px;">
+                <label>Password:</label> 
+            </div>
+            <div>
+                <input type="password" required="required" class="form_control" name="password"/>
+            </div>
+           
+            <input type="submit" value="Login" class="btn"/>
+            <input type="reset" value="Reset" class="btn"/>
+          
+            
+        </div>
+    </form>
+</div>
+{% endblock %}
